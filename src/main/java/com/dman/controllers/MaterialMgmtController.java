@@ -19,10 +19,10 @@ public class MaterialMgmtController {
 	private static final Logger logger = LoggerFactory
             .getLogger(MaterialMgmtController.class);
 	
-	@RequestMapping(value = "/test", method = RequestMethod.POST, headers = "Accept=application/json")
-	public String commonTest(@RequestParam(value = "test", required = true) String type) {
+	@RequestMapping(value = "/test", method = RequestMethod.GET, headers = "Accept=application/json")
+	public String commonTest(@RequestParam(value = "msg", required = true) String type) {
 		
-		String msg = "success";
+		String msg = type;
 		
 		logger.info("Successfully hitting the controller");
 		
